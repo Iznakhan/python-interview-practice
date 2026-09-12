@@ -1,5 +1,14 @@
-### 4. Find all prime numbers between 100 and 200.
+def prime_numbers(start: int, end: int) -> None:
+    """
+    Prints all prime numbers between 100 and 200.
+    """
+    for numbers in range(start, end + 1):
+        for i in range(2, numbers):
+            if numbers % i == 0:
+                break
+        else:
+            print(numbers)
 
-### All prime numbers between 100 and 200 are:
 
-### 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199
+if __name__ == "__main__":
+    prime_numbers(100, 200)
